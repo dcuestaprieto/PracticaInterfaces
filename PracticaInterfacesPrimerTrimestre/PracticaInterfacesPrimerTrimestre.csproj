@@ -49,10 +49,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Modelo\" />
 	  <Folder Include="Templates\" />
-	  <Folder Include="Repositorios\" />
-	  <Folder Include="VistaModelo\" />
 	</ItemGroup>
 
 	<ItemGroup>
