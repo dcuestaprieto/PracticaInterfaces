@@ -48,4 +48,28 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Modelo\" />
+	  <Folder Include="Templates\" />
+	  <Folder Include="Repositorios\" />
+	  <Folder Include="VistaModelo\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	  <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.6" />
+	  <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.6" />
+	  <PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Vista\VistaInicio.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Vista\VistaRegistro.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
