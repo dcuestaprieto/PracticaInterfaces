@@ -9,5 +9,4 @@
     <ShellContent
         ContentTemplate="{DataTemplate vista:VistaInicio}"
         Route="MainPage" />
-
 </Shell>

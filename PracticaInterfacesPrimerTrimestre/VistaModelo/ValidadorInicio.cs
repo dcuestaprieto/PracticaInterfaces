@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using PracticaInterfacesPrimerTrimestre.Modelo;
 using System;
 using System.Collections.Generic;
@@ -15,13 +16,33 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
         public ObservableCollection<string> Errors { get; set; } = new ObservableCollection<string>();
         //TODO: en la clase App.cs crear el atributo publico y estático UserRepository y llamar al método de listarUsuarios
         public ObservableCollection<User> Users { get; set; }
+
         private string username;
         [Required(ErrorMessage = "El nombre de usuario es requerido")]
         public string Username 
         {
             get => username;
             set => SetProperty(ref username, value);
+        }
+
+        private string password;
+        [Required(ErrorMessage ="La contraseña es requerida")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$",ErrorMessage = "La contraseña no cumple con la complejidad mínima")]
+        public string Password
+        {
+            get => password;
+            set => SetProperty(ref password, value);
+        }
+
+        [RelayCommand]
+        public void Validar()
+        {
+            Errors.Clear();
+            ValidateAllProperties();
+            GetErrors(nameof(Username)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
+            GetErrors(nameof(Password)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
 
         }
+
     }
 }

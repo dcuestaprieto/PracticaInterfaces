@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mv="clr-namespace:PracticaInterfacesPrimerTrimestre.VistaModelo"
              x:Class="PracticaInterfacesPrimerTrimestre.Vista.VistaInicio">
+    <ContentPage.BindingContext>
+        <mv:ValidadorInicio/>
+    </ContentPage.BindingContext>
     <VerticalStackLayout>
-        
+        <Label Text="Nombre Usuario:"/>
+        <Entry Text="{Binding Username}"/>
+        <Label Text="Contraseña:"/>
+        <Entry Text="{Binding Password}"/>
+        <Button Text="Validar" Command="{Binding ValidarCommand}"/>
     </VerticalStackLayout>
 </ContentPage>

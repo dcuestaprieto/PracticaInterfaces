@@ -8,39 +8,39 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PracticaInterfacesPrimerTrimestre
-build_property.ProjectDir = C:\Users\dcues\source\repos\PracticaInterfacesPrimerTrimestre\PracticaInterfacesPrimerTrimestre\
+build_property.ProjectDir = C:\Users\dcues\Source\Repos\dcuestaprieto\PracticaInterfaces\PracticaInterfacesPrimerTrimestre\
 
-[C:/Users/dcues/source/repos/PracticaInterfacesPrimerTrimestre/PracticaInterfacesPrimerTrimestre/App.xaml]
+[C:/Users/dcues/Source/Repos/dcuestaprieto/PracticaInterfaces/PracticaInterfacesPrimerTrimestre/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PracticaInterfacesPrimerTrimestre.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/dcues/source/repos/PracticaInterfacesPrimerTrimestre/PracticaInterfacesPrimerTrimestre/AppShell.xaml]
+[C:/Users/dcues/Source/Repos/dcuestaprieto/PracticaInterfaces/PracticaInterfacesPrimerTrimestre/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PracticaInterfacesPrimerTrimestre.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/dcues/source/repos/PracticaInterfacesPrimerTrimestre/PracticaInterfacesPrimerTrimestre/Resources/Styles/Colors.xaml]
+[C:/Users/dcues/Source/Repos/dcuestaprieto/PracticaInterfaces/PracticaInterfacesPrimerTrimestre/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PracticaInterfacesPrimerTrimestre.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/dcues/source/repos/PracticaInterfacesPrimerTrimestre/PracticaInterfacesPrimerTrimestre/Resources/Styles/Styles.xaml]
+[C:/Users/dcues/Source/Repos/dcuestaprieto/PracticaInterfaces/PracticaInterfacesPrimerTrimestre/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PracticaInterfacesPrimerTrimestre.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/dcues/source/repos/PracticaInterfacesPrimerTrimestre/PracticaInterfacesPrimerTrimestre/Vista/VistaInicio.xaml]
+[C:/Users/dcues/Source/Repos/dcuestaprieto/PracticaInterfaces/PracticaInterfacesPrimerTrimestre/Vista/VistaInicio.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PracticaInterfacesPrimerTrimestre.Vista.VistaInicio.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\VistaInicio.xaml
 build_metadata.AdditionalFiles.RelativePath = Vista\VistaInicio.xaml
 
-[C:/Users/dcues/source/repos/PracticaInterfacesPrimerTrimestre/PracticaInterfacesPrimerTrimestre/Vista/VistaRegistro.xaml]
+[C:/Users/dcues/Source/Repos/dcuestaprieto/PracticaInterfaces/PracticaInterfacesPrimerTrimestre/Vista/VistaRegistro.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = PracticaInterfacesPrimerTrimestre.Vista.VistaRegistro.xaml
 build_metadata.AdditionalFiles.TargetPath = Vista\VistaRegistro.xaml
