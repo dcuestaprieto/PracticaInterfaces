@@ -27,7 +27,7 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
 
         private string password;
         [Required(ErrorMessage ="La contraseña es requerida")]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$",ErrorMessage = "La contraseña no cumple con la complejidad mínima")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$", ErrorMessage = "La contraseña no cumple con la complejidad mínima")]
         public string Password
         {
             get => password;
@@ -35,13 +35,15 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
         }
 
         [RelayCommand]
-        public void Validar()
+        public async void Validar()
         {
             Errors.Clear();
             ValidateAllProperties();
-            GetErrors(nameof(Username)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
-            GetErrors(nameof(Password)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
-
+            GetErrors(nameof(Username)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
+            GetErrors(nameof(Password)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
+            if (Errors.Count == 0) {
+                await AppShell.Current.GoToAsync(nameof(Vista.VistaUsuarios));
+            }
         }
 
     }

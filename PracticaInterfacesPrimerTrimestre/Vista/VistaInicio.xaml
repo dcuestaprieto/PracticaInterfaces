@@ -12,5 +12,7 @@
         <Label Text="Contraseña:"/>
         <Entry Text="{Binding Password}"/>
         <Button Text="Validar" Command="{Binding ValidarCommand}"/>
+        <ListView ItemsSource="{Binding Errors}"/>
+        <Button Text="Registro" />
     </VerticalStackLayout>
 </ContentPage>

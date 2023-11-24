@@ -13,6 +13,6 @@ namespace PracticaInterfacesPrimerTrimestre.Modelo
         public int Id { get; set; }
         public string Username { get; set; }
         public string Passwd { get; set; }
-
+        public string Age { get; set; }
     }
 }

@@ -28681,11 +28681,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dcues\\Source\\Repos\\dcuestaprieto\\PracticaInterfaces\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre.csproj",
+      "projectUniqueName": "C:\\Users\\dcues\\source\\repos\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre.csproj",
       "projectName": "PracticaInterfacesPrimerTrimestre",
-      "projectPath": "C:\\Users\\dcues\\Source\\Repos\\dcuestaprieto\\PracticaInterfaces\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre.csproj",
+      "projectPath": "C:\\Users\\dcues\\source\\repos\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre.csproj",
       "packagesPath": "C:\\Users\\dcues\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dcues\\Source\\Repos\\dcuestaprieto\\PracticaInterfaces\\PracticaInterfacesPrimerTrimestre\\obj\\",
+      "outputPath": "C:\\Users\\dcues\\source\\repos\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
@@ -28800,15 +28800,15 @@
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
-            "version": "[6.0.24, 6.0.24]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
-            "version": "[6.0.24, 6.0.24]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-            "version": "[6.0.24, 6.0.24]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Maui.Controls.Ref.android",
@@ -28852,7 +28852,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       },
       "net6.0-ios16.1": {
         "targetAlias": "net6.0-ios",
@@ -28955,7 +28955,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       },
       "net6.0-maccatalyst16.1": {
         "targetAlias": "net6.0-maccatalyst",
@@ -29059,7 +29059,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       },
       "net6.0-windows10.0.19041": {
         "targetAlias": "net6.0-windows10.0.19041.0",
@@ -29109,7 +29109,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[6.0.24, 6.0.24]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Maui.Controls.Ref.win",
@@ -29137,7 +29137,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[6.0.24, 6.0.24]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -29145,7 +29145,7 @@
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[6.0.24, 6.0.24]"
+            "version": "[6.0.21, 6.0.21]"
           }
         ],
         "frameworkReferences": {
@@ -29165,7 +29165,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

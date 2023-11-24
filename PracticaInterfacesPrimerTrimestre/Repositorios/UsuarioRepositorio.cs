@@ -18,7 +18,7 @@ namespace PracticaInterfacesPrimerTrimestre.Repositorios
         {
             this.route = route;
             connection = new SQLiteConnection(this.route);
-            System.Diagnostics.Debug.WriteLine($"Ruta de Base de datos: {route}");
+            System.Diagnostics.Debug.WriteLine($"Ruta de Base de datos: {this.route}");
             if (!connection.TableMappings.Any(e => e.MappedType.Name == "usuarios"))
             {
                 connection.CreateTable<User>();
