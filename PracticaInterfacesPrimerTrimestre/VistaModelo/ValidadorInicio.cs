@@ -41,9 +41,13 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
             ValidateAllProperties();
             GetErrors(nameof(Username)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
             GetErrors(nameof(Password)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
-            /*if (Errors.Count == 0) {
+            if (Errors.Count == 0) {
+                if (App.UsuarioRepositorio.InicioValido(Username, Password))
+                {
+
+                }
                 await AppShell.Current.GoToAsync(nameof(Vista.VistaUsuarios));
-            }*/
+            }
         }
 
         [RelayCommand]

@@ -7,6 +7,7 @@
         <mv:ValidadorRegistro/>
     </ContentPage.BindingContext>
     <VerticalStackLayout>
+        <Label Text="Registro" FontSize="30"/>
         <Label Text="Nombre Completo:"/>
         <Entry Text="{Binding Name}"/>
         <Label Text="Username:"/>
@@ -15,8 +16,8 @@
         <Entry Text="{Binding Age}"/>
         <Label Text="Contraseña:"/>
         <Entry Text="{Binding Password}"/>
-
         <Button Text="Validar" Command="{Binding ValidarCommand}"/>
-        <ListView ItemsSource="{Binding Errors}"/>
+        <Button Text="Iniciar Sesión" Command="{Binding ChangeToSignInViewCommand}"/>
+        <CollectionView ItemsSource="{Binding Errors}"/>
     </VerticalStackLayout>
 </ContentPage>

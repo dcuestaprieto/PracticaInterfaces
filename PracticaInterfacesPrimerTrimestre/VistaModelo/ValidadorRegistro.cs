@@ -43,6 +43,7 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
         }
 
         private string age;
+        [Required(ErrorMessage = "La edad es requerida")]
         [RegularExpression(@"^\d{2}$",ErrorMessage ="La edad no es válida")]
         public string Age
         {
@@ -55,16 +56,29 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
         {
             Errors.Clear();
             ValidateAllProperties();
-            GetErrors(nameof(Username)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
-            GetErrors(nameof(Password)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
-            GetErrors(nameof(Age)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
+            GetErrors(nameof(Name)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
+            GetErrors(nameof(Username)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
+            GetErrors(nameof(Password)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
+            GetErrors(nameof(Age)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
 
-            if(Errors.Count == 0)
+            if (Errors.Count == 0)
             {
-                App.UsuarioRepositorio.Add(new User { Name = this.Name, Username = this.Username, Passwd = this.Password, Age = int.Parse(this.Age) });
-                System.Diagnostics.Debug.WriteLine("\nusuario en teoria creado\n");
+                if (App.UsuarioRepositorio.IsUsernameAvailable(Name))
+                {
+                    App.UsuarioRepositorio.Add(new User { Name = this.Name, Username = this.Username, Passwd = this.Password, Age = int.Parse(this.Age) });
+                    System.Diagnostics.Debug.WriteLine("\nusuario en teoria creado\n");
+                }
+                else
+                {
+                    Errors.Add("El usuario ya existe");
+                }
             }
 
+        }
+        [RelayCommand]
+        public async void ChangeToSignInView()
+        {
+            await AppShell.Current.GoToAsync(nameof(Vista.VistaInicio));
         }
 
     }

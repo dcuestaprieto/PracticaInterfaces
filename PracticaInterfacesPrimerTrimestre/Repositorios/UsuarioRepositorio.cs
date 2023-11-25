@@ -42,5 +42,42 @@ namespace PracticaInterfacesPrimerTrimestre.Repositorios
             List<User> userList = connection.Table<User>().ToList();
             return new ObservableCollection<User> (userList);
         }
+
+        public User FindUser(int id)
+        {
+            return connection.Find<User>(id);
+        }
+
+        public Boolean IsUsernameAvailable(string name)
+        {
+            //int conteo = connection.Table<User>().Where(u => u.Name.Equals(userName)).ToList().Count;
+            //System.Diagnostics.Debug.WriteLine(conteo);
+            //System.Diagnostics.Debug.WriteLine(connection.Table<User>().Any(user => user.Name.Equals(userName)));
+            //return connection.Table<User>().Any(user => user.Name.Equals(userName));
+            
+            //
+            /*
+             * si el count es 0 es que sí está disponible (true)
+             * si el count es diferente de 0 es que ya hay algún registro con ese nombre (false)
+             */
+            return connection.Table<User>().Where(u => u.Name.Equals(name)).Count() == 0;
+        }
+        public Boolean InicioValido(string username, string password)
+        {
+            Boolean isValid = true;
+            if(IsUsernameAvailable(username))
+            {
+                var usuariosFiltrados = connection.Table<User>()
+                               .Where(u => u.Name.Equals(username) && u.Passwd.Equals(password))
+                               .ToList();
+            }
+            else
+            {
+                isValid = false;
+            }
+
+
+            return isValid;
+        }
     }
 }
