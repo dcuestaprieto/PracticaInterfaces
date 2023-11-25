@@ -17,6 +17,14 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
         //TODO: en la clase App.cs crear el atributo publico y estático UserRepository y llamar al método de listarUsuarios
         public ObservableCollection<User> Users { get; set; }
 
+        private string name;
+        [Required(ErrorMessage = "El nombre es requerido")]
+        public string Name
+        {
+            get => name;
+            set => SetProperty(ref name, value);
+        }
+
         private string username;
         [Required(ErrorMessage = "El nombre de usuario es requerido")]
         public string Username
@@ -50,6 +58,13 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
             GetErrors(nameof(Username)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
             GetErrors(nameof(Password)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
             GetErrors(nameof(Age)).ToList().ForEach(error => System.Diagnostics.Debug.WriteLine(error.ErrorMessage));
+
+            if(Errors.Count == 0)
+            {
+                App.UsuarioRepositorio.Add(new User { Name = this.Name, Username = this.Username, Passwd = this.Password, Age = int.Parse(this.Age) });
+                System.Diagnostics.Debug.WriteLine("\nusuario en teoria creado\n");
+            }
+
         }
 
     }

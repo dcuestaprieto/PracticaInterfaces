@@ -12,7 +12,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-        String ruta = GetRoute.ReturnRoute("usuarios.db");
+
+        string ruta = GetRoute.ReturnRoute("usuarios.db");
         builder.Services.AddSingleton<UsuarioRepositorio>(
             s => ActivatorUtilities.CreateInstance<UsuarioRepositorio>(s, ruta)
         );

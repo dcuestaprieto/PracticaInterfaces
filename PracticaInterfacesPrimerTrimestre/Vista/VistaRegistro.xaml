@@ -7,6 +7,8 @@
         <mv:ValidadorRegistro/>
     </ContentPage.BindingContext>
     <VerticalStackLayout>
+        <Label Text="Nombre Completo:"/>
+        <Entry Text="{Binding Name}"/>
         <Label Text="Username:"/>
         <Entry Text="{Binding Username}"/>
         <Label Text="Edad:"/>

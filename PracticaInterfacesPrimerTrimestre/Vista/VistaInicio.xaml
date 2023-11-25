@@ -13,6 +13,6 @@
         <Entry Text="{Binding Password}"/>
         <Button Text="Validar" Command="{Binding ValidarCommand}"/>
         <ListView ItemsSource="{Binding Errors}"/>
-        <Button Text="Registro" />
+        <Button Text="Registro" Command="{Binding ChangeToRegisterViewCommand}"/>
     </VerticalStackLayout>
 </ContentPage>
