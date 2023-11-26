@@ -13,6 +13,7 @@ namespace PracticaInterfacesPrimerTrimestre.Modelo
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Name { get; set; }
+        [Unique]
         public string Username { get; set; }
         public string Passwd { get; set; }
         public int Age { get; set; }

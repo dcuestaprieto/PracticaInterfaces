@@ -43,39 +43,42 @@ namespace PracticaInterfacesPrimerTrimestre.Repositorios
             return new ObservableCollection<User> (userList);
         }
 
-        public User FindUser(int id)
+        public User FindUserByUsername(string username)
         {
-            return connection.Find<User>(id);
+            return connection.Table<User>().Where(u => u.Username.Equals(username)).First();
         }
 
-        public Boolean IsUsernameAvailable(string name)
+        public Boolean UsernameExists(string username)
         {
             //int conteo = connection.Table<User>().Where(u => u.Name.Equals(userName)).ToList().Count;
             //System.Diagnostics.Debug.WriteLine(conteo);
             //System.Diagnostics.Debug.WriteLine(connection.Table<User>().Any(user => user.Name.Equals(userName)));
             //return connection.Table<User>().Any(user => user.Name.Equals(userName));
-            
-            //
-            /*
-             * si el count es 0 es que sí está disponible (true)
-             * si el count es diferente de 0 es que ya hay algún registro con ese nombre (false)
-             */
-            return connection.Table<User>().Where(u => u.Name.Equals(name)).Count() == 0;
-        }
-        public Boolean InicioValido(string username, string password)
-        {
-            Boolean isValid = true;
-            if(IsUsernameAvailable(username))
-            {
-                var usuariosFiltrados = connection.Table<User>()
-                               .Where(u => u.Name.Equals(username) && u.Passwd.Equals(password))
-                               .ToList();
-            }
-            else
-            {
-                isValid = false;
-            }
 
+            int result = connection.Table<User>().Where(u => u.Username.Equals(username)).Count();
+            /*
+             * true si es diferente de 0 (en la base de datos ya está ese username)
+             * false si el count es 0 (no está ese nombre en la base de datos)
+             */
+            return result != 0;
+        }
+        public Boolean UsuarioCorrecto(string username, string password)
+        {
+            Boolean isValid = false;
+            //Si no está disponible es que ya existe en la base de datos
+            if(UsernameExists(username))
+            {
+                //Como el username no está disponible (existe el username en la base de datos)
+                //no puede ser null por lo que puedo ejecutar el método de FindByUsername
+                User user = FindUserByUsername(username);
+                if (user != null)
+                {
+                    if (user.Username.Equals(username) && user.Passwd.Equals(password))
+                    {
+                        isValid = true;
+                    }
+                }
+            }
 
             return isValid;
         }

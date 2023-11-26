@@ -35,7 +35,8 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
 
         private string password;
         [Required(ErrorMessage = "La contraseña es requerida")]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$", ErrorMessage = "La contraseña no cumple con la complejidad mínima")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$",
+            ErrorMessage = "La contraseña debe estar compuesta de mayusculas, minusculas, números y caracteres especiales")]
         public string Password
         {
             get => password;
@@ -52,7 +53,7 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
         }
 
         [RelayCommand]
-        public void Validar()
+        public async void Validar()
         {
             Errors.Clear();
             ValidateAllProperties();
@@ -63,10 +64,10 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
 
             if (Errors.Count == 0)
             {
-                if (App.UsuarioRepositorio.IsUsernameAvailable(Name))
+                if (!App.UsuarioRepositorio.UsernameExists(Username))
                 {
                     App.UsuarioRepositorio.Add(new User { Name = this.Name, Username = this.Username, Passwd = this.Password, Age = int.Parse(this.Age) });
-                    System.Diagnostics.Debug.WriteLine("\nusuario en teoria creado\n");
+                    await AppShell.Current.GoToAsync(nameof(Vista.VistaUsuarios));
                 }
                 else
                 {

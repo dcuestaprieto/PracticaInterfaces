@@ -27,7 +27,8 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
 
         private string password;
         [Required(ErrorMessage ="La contraseña es requerida")]
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$", ErrorMessage = "La contraseña no cumple con la complejidad mínima")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$",
+            ErrorMessage = "La contraseña debe estar compuesta de mayusculas, minusculas, números y caracteres especiales")]
         public string Password
         {
             get => password;
@@ -42,11 +43,25 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
             GetErrors(nameof(Username)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
             GetErrors(nameof(Password)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
             if (Errors.Count == 0) {
-                if (App.UsuarioRepositorio.InicioValido(Username, Password))
+                //Valido si el usuario existe para validarlo, pero si no existe añado un error de que no existe
+                if (App.UsuarioRepositorio.UsernameExists(Username))
                 {
-
+                    if (App.UsuarioRepositorio.UsuarioCorrecto(Username, Password))
+                    {
+                        //System.Diagnostics.Debug.WriteLine("usuario correcto");
+                        await AppShell.Current.GoToAsync(nameof(Vista.VistaUsuarios));
+                    }
+                    else
+                    {
+                        Errors.Add("Usuario o contraseña no validas");
+                    }
                 }
-                await AppShell.Current.GoToAsync(nameof(Vista.VistaUsuarios));
+                else
+                {
+                    Errors.Add("El usuario no existe");
+                }
+
+
             }
         }
 
