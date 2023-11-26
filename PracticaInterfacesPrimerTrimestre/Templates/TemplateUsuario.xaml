@@ -3,9 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mo="clr-namespace:PracticaInterfacesPrimerTrimestre.Modelo"
              x:Class="PracticaInterfacesPrimerTrimestre.Templates.TemplateUsuario"
-             x:DataType="mo:User">
-    <VerticalStackLayout>
-        <Label Text="{Binding Username}"/>
-        <Label Text="{Binding Age}"/>
-    </VerticalStackLayout>
+             x:DataType="mo:User"
+             WidthRequest="100">
+    <!-- Tarjeta de Usuario -->
+    <Frame Margin="5" Padding="5">
+        <Grid BackgroundColor="Gray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="{Binding Id}" Margin="10,0,0,0">
+                <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
+                <Label Text="{Binding Username}" FontSize="16" />
+                <Label Text="{Binding Age}" FontSize="14"/>
+            </StackLayout>
+        </Grid>
+    </Frame>
 </ContentView>

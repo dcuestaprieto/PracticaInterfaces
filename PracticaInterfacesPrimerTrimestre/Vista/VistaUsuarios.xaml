@@ -2,18 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PracticaInterfacesPrimerTrimestre.Vista.VistaUsuarios"
-             xmlns:te="clr-namespace:PracticaInterfacesPrimerTrimestre.Templates"
-             
-             Title="VistaUsuarios">
-    <VerticalStackLayout>
-        <Label Text="Lista Usuarios"/>
-
+             xmlns:modelo="clr-namespace:PracticaInterfacesPrimerTrimestre.Modelo"
+             xmlns:template="clr-namespace:PracticaInterfacesPrimerTrimestre.Templates"
+             x:DataType="modelo:User">
+    <FlexLayout Background="White" Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" AlignContent="Start">
         <CollectionView x:Name="lista">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <te:TemplateUsuario/>
+                    <template:TemplateUsuario WidthRequest="100"/>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </VerticalStackLayout>
+    </FlexLayout>
 </ContentPage>
