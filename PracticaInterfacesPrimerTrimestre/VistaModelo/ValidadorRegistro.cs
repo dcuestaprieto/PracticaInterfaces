@@ -43,6 +43,14 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
             set => SetProperty(ref password, value);
         }
 
+        private string passwordRepeat;
+        [Required(ErrorMessage = "Debes repetir la contraseña")]
+        public string PasswordRepeat
+        {
+            get => password;
+            set => SetProperty(ref password, value);
+        }
+
         private string age;
         [Required(ErrorMessage = "La edad es requerida")]
         [RegularExpression(@"^\d{2}$",ErrorMessage ="La edad no es válida")]
@@ -60,6 +68,7 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
             GetErrors(nameof(Name)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
             GetErrors(nameof(Username)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
             GetErrors(nameof(Password)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
+            GetErrors(nameof(PasswordRepeat)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
             GetErrors(nameof(Age)).ToList().ForEach(error => Errors.Add(error.ErrorMessage));
 
             if (Errors.Count == 0)

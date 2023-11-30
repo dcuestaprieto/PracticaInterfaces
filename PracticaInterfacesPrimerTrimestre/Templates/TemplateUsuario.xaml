@@ -15,8 +15,14 @@
 
             <StackLayout Grid.Column="{Binding Id}" Margin="10,0,0,0">
                 <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
-                <Label Text="{Binding Username}" FontSize="16" />
-                <Label Text="{Binding Age}" FontSize="14"/>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nombre Usuario:" Padding="0,0,10,0"/>
+                    <Label Text="{Binding Username}" FontSize="16" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Edad: " Padding="0,0,10,0"/>
+                    <Label Text="{Binding Age}" FontSize="14"/>
+                </StackLayout>
             </StackLayout>
         </Grid>
     </Frame>

@@ -6,7 +6,7 @@
     <ContentPage.BindingContext>
         <mv:ValidadorInicio/>
     </ContentPage.BindingContext>
-    <VerticalStackLayout>
+    <VerticalStackLayout Margin="15">
         <Label Text="Inicia Sesión" FontSize="30"/>
         <Label Text="Nombre Usuario:"/>
         <Entry Text="{Binding Username}"/>

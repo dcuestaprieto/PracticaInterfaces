@@ -5,12 +5,18 @@ namespace PracticaInterfacesPrimerTrimestre;
 public partial class App : Application
 {
 	public static UsuarioRepositorio UsuarioRepositorio { get; set; }
-	
-	public App(UsuarioRepositorio usuarioRepositorio)
+
+    const int WindowWidth = 600;
+    const int WindowHeight = 600;
+
+    public App(UsuarioRepositorio usuarioRepositorio)
 	{
 		UsuarioRepositorio = usuarioRepositorio;
 		InitializeComponent();
 
-		MainPage = new AppShell();
+
+
+        MainPage = new AppShell();
 	}
+
 }

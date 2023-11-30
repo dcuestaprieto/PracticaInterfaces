@@ -5,8 +5,8 @@
              xmlns:modelo="clr-namespace:PracticaInterfacesPrimerTrimestre.Modelo"
              xmlns:template="clr-namespace:PracticaInterfacesPrimerTrimestre.Templates"
              x:DataType="modelo:User">
-    <FlexLayout Background="White" Direction="Row" AlignItems="Start" JustifyContent="SpaceEvenly" AlignContent="Start">
-        <CollectionView x:Name="lista">
+    <FlexLayout Background="White">
+        <CollectionView x:Name="lista" ItemsLayout="VerticalGrid,2">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <template:TemplateUsuario WidthRequest="100"/>

@@ -16,6 +16,8 @@
         <Entry Text="{Binding Age}"/>
         <Label Text="Contraseña:"/>
         <Entry Text="{Binding Password}"/>
+        <Label Text="Repite la contraseña:"/>
+        <Entry Text="{Binding PasswordRepeat}"/>
         <Button Text="Validar" Command="{Binding ValidarCommand}"/>
         <Button Text="Iniciar Sesión" Command="{Binding ChangeToSignInViewCommand}"/>
         <CollectionView ItemsSource="{Binding Errors}"/>
