@@ -5,20 +5,17 @@
              x:Class="PracticaInterfacesPrimerTrimestre.Templates.TemplateUsuario"
              x:DataType="mo:User"
              WidthRequest="100">
-    <!-- Tarjeta de Usuario -->
     <Frame Background="white" Margin="5" Padding="5" >
-        <Grid BackgroundColor="White">
-            <StackLayout Grid.Row="{Binding Id}"  Margin="10,0,0,0">
-                <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" TextColor="#B21A32" Margin="0,0,0,10"/>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Nombre:" Padding="0,0,10,0" TextColor="Black" FontAttributes="Bold"/>
-                    <Label Text="{Binding Username}" TextColor="Black"/>
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Edad: " Padding="0,0,10,0" TextColor="Black" FontAttributes="Bold"/>
-                    <Label Text="{Binding Age}" FontSize="14" TextColor="Black"/>
-                </StackLayout>
-            </StackLayout>          
-        </Grid>
+        <StackLayout Margin="10,0,0,0">
+            <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" TextColor="#B21A32" Margin="0,0,0,10"/>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Nombre:" Padding="0,0,10,0" TextColor="Black" FontAttributes="Bold"/>
+                <Label Text="{Binding Username}" TextColor="Black"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Edad: " Padding="0,0,10,0" TextColor="Black" FontAttributes="Bold"/>
+                <Label Text="{Binding Age}" FontSize="14" TextColor="Black"/>
+            </StackLayout>
+        </StackLayout>
     </Frame>
 </ContentView>

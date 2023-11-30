@@ -14,8 +14,6 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
     public partial class ValidadorRegistro : ObservableValidator
     {
         public ObservableCollection<string> Errors { get; set; } = new ObservableCollection<string>();
-        //TODO: en la clase App.cs crear el atributo publico y estático UserRepository y llamar al método de listarUsuarios
-        public ObservableCollection<User> Users { get; set; }
 
         private string name;
         [Required(ErrorMessage = "El nombre es requerido")]
@@ -45,10 +43,12 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
 
         private string passwordRepeat;
         [Required(ErrorMessage = "Debes repetir la contraseña")]
+        //Esta validacion nos facilita el repetir contraseña ya que valida que sea igual al primer parámetro
+        [Compare(nameof(Password), ErrorMessage = "Las Contraseñas deben de ser iguales")]
         public string PasswordRepeat
         {
-            get => password;
-            set => SetProperty(ref password, value);
+            get => passwordRepeat;
+            set => SetProperty(ref passwordRepeat, value);
         }
 
         private string age;
@@ -73,13 +73,17 @@ namespace PracticaInterfacesPrimerTrimestre.VistaModelo
 
             if (Errors.Count == 0)
             {
+                //después de validar que no haya ningún error, valido que el nombre introducido no exista ya en la base de datos
                 if (!App.UsuarioRepositorio.UsernameExists(Username))
                 {
+                    //si no existe lo añado a la base de datos
                     App.UsuarioRepositorio.Add(new User { Name = this.Name, Username = this.Username, Passwd = this.Password, Age = int.Parse(this.Age) });
+                    //y cambio de vista a la vista usuarios
                     await AppShell.Current.GoToAsync(nameof(Vista.VistaUsuarios));
                 }
                 else
                 {
+                    //si sí existe añado un error
                     Errors.Add("El usuario ya existe");
                 }
             }

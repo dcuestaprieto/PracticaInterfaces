@@ -1,1 +1,1 @@
-C:\Users\Yurim\source\repos\PracticaInterfaces\PracticaInterfacesPrimerTrimestre\PracticaInterfacesPrimerTrimestre.csproj;x64
+C:\Users\dcues\source\repos\PracticaInterfacesPrimerTrimestre\PracticaInterfacesPrimerTrimestre\PracticaInterfacesPrimerTrimestre.csproj;x64

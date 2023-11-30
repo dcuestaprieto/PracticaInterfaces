@@ -6,6 +6,5 @@ public partial class VistaUsuarios : ContentPage
 	{
 		InitializeComponent();
 		lista.ItemsSource = App.UsuarioRepositorio.showUsuarios();
-
     }
 }

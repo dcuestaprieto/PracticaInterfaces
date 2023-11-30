@@ -10381,7 +10381,7 @@
         }
       }
     },
-    "net6.0-android31.0/iossimulator-x64": {
+    "net6.0-android31.0/ios-arm64": {
       "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
@@ -18139,7 +18139,7 @@
         }
       }
     },
-    "net6.0-ios16.1/iossimulator-x64": {
+    "net6.0-ios16.1/ios-arm64": {
       "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
@@ -20801,7 +20801,7 @@
         }
       }
     },
-    "net6.0-maccatalyst16.1/iossimulator-x64": {
+    "net6.0-maccatalyst16.1/ios-arm64": {
       "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
@@ -24059,7 +24059,7 @@
         }
       }
     },
-    "net6.0-windows10.0.19041/iossimulator-x64": {
+    "net6.0-windows10.0.19041/ios-arm64": {
       "CommunityToolkit.Mvvm/8.2.2": {
         "type": "package",
         "compile": {
@@ -28675,24 +28675,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Yurim\\.nuget\\packages\\": {},
+    "C:\\Users\\dcues\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yurim\\Source\\Repos\\PracticaInterfaces\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre.csproj",
+      "projectUniqueName": "C:\\Users\\dcues\\source\\repos\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre.csproj",
       "projectName": "PracticaInterfacesPrimerTrimestre",
-      "projectPath": "C:\\Users\\Yurim\\Source\\Repos\\PracticaInterfaces\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre.csproj",
-      "packagesPath": "C:\\Users\\Yurim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yurim\\Source\\Repos\\PracticaInterfaces\\PracticaInterfacesPrimerTrimestre\\obj\\",
+      "projectPath": "C:\\Users\\dcues\\source\\repos\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre.csproj",
+      "packagesPath": "C:\\Users\\dcues\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dcues\\source\\repos\\PracticaInterfacesPrimerTrimestre\\PracticaInterfacesPrimerTrimestre\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Yurim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dcues\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -28800,15 +28800,15 @@
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-arm64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.AspNetCore.App.Runtime.linux-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Maui.Controls.Ref.android",
@@ -28852,7 +28852,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       },
       "net6.0-ios16.1": {
         "targetAlias": "net6.0-ios",
@@ -28910,7 +28910,7 @@
             "version": "[16.4.60, 16.4.60]"
           },
           {
-            "name": "Microsoft.iOS.Runtime.iossimulator-x64",
+            "name": "Microsoft.iOS.Runtime.ios-arm64",
             "version": "[16.4.60, 16.4.60]"
           },
           {
@@ -28955,7 +28955,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       },
       "net6.0-maccatalyst16.1": {
         "targetAlias": "net6.0-maccatalyst",
@@ -29059,7 +29059,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       },
       "net6.0-windows10.0.19041": {
         "targetAlias": "net6.0-windows10.0.19041.0",
@@ -29109,7 +29109,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Maui.Controls.Ref.win",
@@ -29137,7 +29137,7 @@
           },
           {
             "name": "Microsoft.NETCore.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           },
           {
             "name": "Microsoft.Windows.SDK.NET.Ref",
@@ -29145,7 +29145,7 @@
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-            "version": "[6.0.22, 6.0.22]"
+            "version": "[6.0.21, 6.0.21]"
           }
         ],
         "frameworkReferences": {
@@ -29165,7 +29165,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
@@ -29181,7 +29181,7 @@
       "android-x86": {
         "#import": []
       },
-      "iossimulator-x64": {
+      "ios-arm64": {
         "#import": []
       },
       "maccatalyst-x64": {
