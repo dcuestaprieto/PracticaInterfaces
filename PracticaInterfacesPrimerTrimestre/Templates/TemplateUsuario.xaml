@@ -6,24 +6,19 @@
              x:DataType="mo:User"
              WidthRequest="100">
     <!-- Tarjeta de Usuario -->
-    <Frame Margin="5" Padding="5">
-        <Grid BackgroundColor="Gray">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <StackLayout Grid.Column="{Binding Id}" Margin="10,0,0,0">
-                <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
+    <Frame Background="white" Margin="5" Padding="5" >
+        <Grid BackgroundColor="White">
+            <StackLayout Grid.Row="{Binding Id}"  Margin="10,0,0,0">
+                <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" TextColor="#B21A32" Margin="0,0,0,10"/>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Nombre Usuario:" Padding="0,0,10,0"/>
-                    <Label Text="{Binding Username}" FontSize="16" />
+                    <Label Text="Nombre:" Padding="0,0,10,0" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="{Binding Username}" TextColor="Black"/>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Edad: " Padding="0,0,10,0"/>
-                    <Label Text="{Binding Age}" FontSize="14"/>
+                    <Label Text="Edad: " Padding="0,0,10,0" TextColor="Black" FontAttributes="Bold"/>
+                    <Label Text="{Binding Age}" FontSize="14" TextColor="Black"/>
                 </StackLayout>
-            </StackLayout>
+            </StackLayout>          
         </Grid>
     </Frame>
 </ContentView>

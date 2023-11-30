@@ -11,8 +11,8 @@
         <Label Text="Nombre Usuario:"/>
         <Entry Text="{Binding Username}"/>
         <Label Text="Contraseña:"/>
-        <Entry Text="{Binding Password}"/>
-        <Button Text="Validar" Command="{Binding ValidarCommand}"/>
+        <Entry Text="{Binding Password}" Margin="0,0,0,20" IsPassword="True"/>
+        <Button Text="Validar" Command="{Binding ValidarCommand}" Margin="0,0,0,10"/>
         <Button Text="Registro" Command="{Binding ChangeToRegisterViewCommand}"/>
         <CollectionView ItemsSource="{Binding Errors}"/>
     </VerticalStackLayout>
